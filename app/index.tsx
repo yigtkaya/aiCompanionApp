@@ -1,0 +1,46 @@
+import { useEffect } from 'react';
+import { View, Text } from 'react-native';
+import { router } from 'expo-router';
+import { useAuth } from '@/contexts/AuthContext';
+import Animated, { FadeIn } from 'react-native-reanimated';
+import { useTranslation } from 'react-i18next';
+
+export default function Index() {
+  const { t } = useTranslation();
+  const { user, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading) {
+      if (user) {
+        // User is authenticated, redirect to main app
+        router.replace('/(tabs)');
+      } else {
+        // User is not authenticated, redirect to get started
+        router.replace('/auth/get-started');
+      }
+    }
+  }, [user, loading]);
+
+  // Show a loading screen while checking authentication
+  return (
+    <View className="flex-1 bg-white dark:bg-secondary-900 items-center justify-center">
+      <Animated.View entering={FadeIn} className="items-center">
+        <View className="w-16 h-16 bg-primary-500 rounded-full items-center justify-center mb-4">
+          <Animated.Text
+            entering={FadeIn.delay(200)}
+            className="text-2xl"
+            style={{ transform: [{ rotate: '360deg' }] }}
+          >
+            🤖
+          </Animated.Text>
+        </View>
+        <Animated.Text 
+          entering={FadeIn.delay(400)}
+          className="text-lg font-medium text-secondary-600 dark:text-secondary-300"
+        >
+          {t('common.loading')}
+        </Animated.Text>
+      </Animated.View>
+    </View>
+  );
+}
