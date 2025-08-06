@@ -1,0 +1,22 @@
+{
+  "common": {
+    "ok": "Vale",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando..."
+  },
+  "tabs": {
+    "home": "Inicio",
+    "explore": "Explorar"
+  },
+  "home": {
+    "title": "Bienvenido",
+    "subtitle": "Comienza editando los archivos"
+  },
+  "explore": {
+    "title": "Explorar",
+    "subtitle": "Esta aplicación incluye código de ejemplo para ayudarte a comenzar."
+  }
+}

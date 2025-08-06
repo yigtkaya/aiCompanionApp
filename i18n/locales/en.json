@@ -1,0 +1,22 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading..."
+  },
+  "tabs": {
+    "home": "Home",
+    "explore": "Explore"
+  },
+  "home": {
+    "title": "Welcome",
+    "subtitle": "Get started by editing the files"
+  },
+  "explore": {
+    "title": "Explore",
+    "subtitle": "This app includes example code to help you get started."
+  }
+}
