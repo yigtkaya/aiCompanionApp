@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0950282170D65C3AF47690BA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31120EF49B2E8A80461C4467 /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		31D567ADD6349FCDD811E877 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1845118FE3F31B6289E953 /* ExpoModulesProvider.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		65309698FF72D7FFC804C17E /* libPods-aiCompanionApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1708BB5475AB736B901396 /* libPods-aiCompanionApp.a */; };
+		41B652DB750FB72D2A93E160 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 55F28B971830D0818ACD38A8 /* PrivacyInfo.xcprivacy */; };
+		56521BC1CAAF24D0E9AE2AF1 /* libPods-aiCompanionApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F15DDE720BA7D7F4CAF1210 /* libPods-aiCompanionApp.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		EBA3A6A45EC000086A9CE8E8 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10A404796F6507F6B8504C /* ExpoModulesProvider.swift */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D02D84645572B024C640334 /* Pods-aiCompanionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiCompanionApp.debug.xcconfig"; path = "Target Support Files/Pods-aiCompanionApp/Pods-aiCompanionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* aiCompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aiCompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = aiCompanionApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = aiCompanionApp/Info.plist; sourceTree = "<group>"; };
-		31120EF49B2E8A80461C4467 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = aiCompanionApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3487E0DE55495A5B0395468C /* Pods-aiCompanionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiCompanionApp.release.xcconfig"; path = "Target Support Files/Pods-aiCompanionApp/Pods-aiCompanionApp.release.xcconfig"; sourceTree = "<group>"; };
+		55F28B971830D0818ACD38A8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = aiCompanionApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7E10A404796F6507F6B8504C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-aiCompanionApp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		9F15DDE720BA7D7F4CAF1210 /* libPods-aiCompanionApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aiCompanionApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = aiCompanionApp/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B0926632D2B7A17A5D464BA9 /* Pods-aiCompanionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiCompanionApp.release.xcconfig"; path = "Target Support Files/Pods-aiCompanionApp/Pods-aiCompanionApp.release.xcconfig"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		CD1708BB5475AB736B901396 /* libPods-aiCompanionApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aiCompanionApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA1845118FE3F31B6289E953 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-aiCompanionApp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = aiCompanionApp/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* aiCompanionApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "aiCompanionApp-Bridging-Header.h"; path = "aiCompanionApp/aiCompanionApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F1E393E8EE2A38711935DF8D /* Pods-aiCompanionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiCompanionApp.debug.xcconfig"; path = "Target Support Files/Pods-aiCompanionApp/Pods-aiCompanionApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65309698FF72D7FFC804C17E /* libPods-aiCompanionApp.a in Frameworks */,
+				56521BC1CAAF24D0E9AE2AF1 /* libPods-aiCompanionApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				31120EF49B2E8A80461C4467 /* PrivacyInfo.xcprivacy */,
+				55F28B971830D0818ACD38A8 /* PrivacyInfo.xcprivacy */,
 			);
 			name = aiCompanionApp;
 			sourceTree = "<group>";
@@ -62,15 +62,15 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				CD1708BB5475AB736B901396 /* libPods-aiCompanionApp.a */,
+				9F15DDE720BA7D7F4CAF1210 /* libPods-aiCompanionApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		767FD649CDAEE08CFAE9731D /* aiCompanionApp */ = {
+		4628FDD24E5E487F57ED7707 /* aiCompanionApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA1845118FE3F31B6289E953 /* ExpoModulesProvider.swift */,
+				7E10A404796F6507F6B8504C /* ExpoModulesProvider.swift */,
 			);
 			name = aiCompanionApp;
 			sourceTree = "<group>";
@@ -89,8 +89,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				C23630C4541E977167754CFD /* Pods */,
-				C064CD3EBDDBB79C8D3C98F4 /* ExpoModulesProviders */,
+				8E8F534256ECD2A18313B67A /* Pods */,
+				BEAD741187B4C1216FAA9C12 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -105,6 +105,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8E8F534256ECD2A18313B67A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1E393E8EE2A38711935DF8D /* Pods-aiCompanionApp.debug.xcconfig */,
+				3487E0DE55495A5B0395468C /* Pods-aiCompanionApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,22 +124,12 @@
 			path = aiCompanionApp/Supporting;
 			sourceTree = "<group>";
 		};
-		C064CD3EBDDBB79C8D3C98F4 /* ExpoModulesProviders */ = {
+		BEAD741187B4C1216FAA9C12 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				767FD649CDAEE08CFAE9731D /* aiCompanionApp */,
+				4628FDD24E5E487F57ED7707 /* aiCompanionApp */,
 			);
 			name = ExpoModulesProviders;
-			sourceTree = "<group>";
-		};
-		C23630C4541E977167754CFD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0D02D84645572B024C640334 /* Pods-aiCompanionApp.debug.xcconfig */,
-				B0926632D2B7A17A5D464BA9 /* Pods-aiCompanionApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,13 +140,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "aiCompanionApp" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				3615C15872275D57FD5101BB /* [Expo] Configure project */,
+				0C2AE461932F31DF3AC0CBC9 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				A1563777CA9D701AB8B3F555 /* [CP] Embed Pods Frameworks */,
+				A797BA7469C870327BDBF380 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				0950282170D65C3AF47690BA /* PrivacyInfo.xcprivacy in Resources */,
+				41B652DB750FB72D2A93E160 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3615C15872275D57FD5101BB /* [Expo] Configure project */ = {
+		0C2AE461932F31DF3AC0CBC9 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -271,12 +271,10 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoLocalization/ExpoLocalization_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/PurchasesHybridCommon/PurchasesHybridCommon.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RevenueCat/RevenueCat.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RevenueCatUI/RevenueCat_RevenueCatUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/boost/boost_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/glog/glog_privacy.bundle",
@@ -288,12 +286,10 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoLocalization_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PurchasesHybridCommon.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RevenueCat.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RevenueCat_RevenueCatUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boost_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/glog_privacy.bundle",
@@ -303,7 +299,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aiCompanionApp/Pods-aiCompanionApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1563777CA9D701AB8B3F555 /* [CP] Embed Pods Frameworks */ = {
+		A797BA7469C870327BDBF380 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				31D567ADD6349FCDD811E877 /* ExpoModulesProvider.swift in Sources */,
+				EBA3A6A45EC000086A9CE8E8 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +336,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D02D84645572B024C640334 /* Pods-aiCompanionApp.debug.xcconfig */;
+			baseConfigurationReference = F1E393E8EE2A38711935DF8D /* Pods-aiCompanionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -376,7 +372,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0926632D2B7A17A5D464BA9 /* Pods-aiCompanionApp.release.xcconfig */;
+			baseConfigurationReference = 3487E0DE55495A5B0395468C /* Pods-aiCompanionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
