@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { View, Text } from 'react-native';
-import { router } from 'expo-router';
 import { useAuth } from '@/contexts/AuthContext';
-import Animated, { FadeIn } from 'react-native-reanimated';
+import { router } from 'expo-router';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 
 export default function Index() {
   const { t } = useTranslation();
