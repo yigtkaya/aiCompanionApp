@@ -12,10 +12,6 @@ export default function Index() {
   const { user, loading } = useAuth();
   const { expoPushToken, notification, error } = useNotification();
 
-  if (error) {
-    return <ThemedText>Error: {error.message}</ThemedText>
-  }
-
   useEffect(() => {
     if (!loading) {
       if (user) {
@@ -27,6 +23,10 @@ export default function Index() {
       }
     }
   }, [user, loading]);
+
+  if (error) {
+    return <ThemedText>Error: {error.message}</ThemedText>
+  }
 
   // Show a loading screen while checking authentication
   return (
