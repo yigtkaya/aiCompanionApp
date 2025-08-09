@@ -1,4 +1,6 @@
+import { ThemedText } from '@/components/ThemedText';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNotification } from '@/contexts/NotificationContext';
 import { router } from 'expo-router';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +10,11 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 export default function Index() {
   const { t } = useTranslation();
   const { user, loading } = useAuth();
+  const { expoPushToken, notification, error } = useNotification();
+
+  if (error) {
+    return <ThemedText>Error: {error.message}</ThemedText>
+  }
 
   useEffect(() => {
     if (!loading) {
@@ -39,6 +46,12 @@ export default function Index() {
           className="text-lg font-medium text-secondary-600 dark:text-secondary-300"
         >
           {t('common.loading')}
+        </Animated.Text>
+        <Animated.Text
+          entering={FadeIn.delay(600)}
+          className="text-lg font-medium text-secondary-600 dark:text-secondary-300"
+        >
+          Your push token is: {expoPushToken}
         </Animated.Text>
       </Animated.View>
     </View>

@@ -40,6 +40,6 @@ app-example
 .claude
 .vscode
 db.sql
-google-services.json
+
 /ios
 /android

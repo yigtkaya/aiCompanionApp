@@ -8,11 +8,8 @@ export interface AuthContextData {
   user: User | null;
   session: Session | null;
   loading: boolean;
-  signUp: (email: string, password: string) => Promise<boolean>;
-  signIn: (email: string, password: string) => Promise<boolean>;
   signInWithOAuth: (provider: 'apple' | 'google') => Promise<boolean>;
   signOut: () => Promise<void>;
-  resetPassword: (email: string) => Promise<boolean>;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -51,50 +48,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  const signUp = async (email: string, password: string): Promise<boolean> => {
-    try {
-      setLoading(true);
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-      });
-
-      if (error) {
-        Alert.alert(t('auth.errors.signUpError'), error.message);
-        return false;
-      }
-
-      Alert.alert('Success', t('auth.success.checkEmailConfirmation'));
-      return true;
-    } catch (error) {
-      Alert.alert(t('auth.errors.signUpError'), t('auth.errors.unexpectedError'));
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const signIn = async (email: string, password: string): Promise<boolean> => {
-    try {
-      setLoading(true);
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
-
-      if (error) {
-        Alert.alert(t('auth.errors.signInError'), error.message);
-        return false;
-      }
-
-      return true;
-    } catch (error) {
-      Alert.alert(t('auth.errors.signInError'), t('auth.errors.unexpectedError'));
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const signInWithOAuth = async (provider: 'apple' | 'google'): Promise<boolean> => {
     try {
@@ -134,37 +87,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const resetPassword = async (email: string): Promise<boolean> => {
-    try {
-      setLoading(true);
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: 'aicompanionapp://auth/reset-password'
-      });
-
-      if (error) {
-        Alert.alert(t('auth.errors.resetPasswordError'), error.message);
-        return false;
-      }
-
-      Alert.alert('Success', t('auth.success.checkEmailReset'));
-      return true;
-    } catch (error) {
-      Alert.alert(t('auth.errors.resetPasswordError'), t('auth.errors.unexpectedError'));
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const value: AuthContextData = {
     user,
     session,
     loading,
-    signUp,
-    signIn,
     signInWithOAuth,
     signOut,
-    resetPassword,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
