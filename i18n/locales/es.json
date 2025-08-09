@@ -1,22 +1,28 @@
 {
-  "common": {
-    "ok": "Vale",
-    "cancel": "Cancelar",
-    "save": "Guardar",
-    "delete": "Eliminar",
-    "edit": "Editar",
-    "loading": "Cargando..."
-  },
-  "tabs": {
-    "home": "Inicio",
-    "explore": "Explorar"
-  },
-  "home": {
-    "title": "Bienvenido",
-    "subtitle": "Comienza editando los archivos"
-  },
-  "explore": {
-    "title": "Explorar",
-    "subtitle": "Esta aplicación incluye código de ejemplo para ayudarte a comenzar."
+  "auth": {
+    "getStarted": {
+      "title": "Bienvenido a AI Companion",
+      "subtitle": "Tu asistente inteligente para conversaciones significativas y productividad.",
+      "createAccount": "Crear Cuenta",
+      "signIn": "Iniciar Sesión",
+      "termsText": "Al continuar, aceptas nuestros Términos de Servicio y Política de Privacidad",
+      "continueWithApple": "Continuar con Apple",
+      "continueWithGoogle": "Continuar con Google"
+    },
+    "errors": {
+      "fillAllFields": "Por favor, completa todos los campos",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden",
+      "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+      "enterEmail": "Por favor, ingresa tu dirección de correo electrónico",
+      "signUpError": "Error al crear la cuenta",
+      "signInError": "Error al iniciar sesión",
+      "signOutError": "Error al cerrar sesión",
+      "resetPasswordError": "Error al restablecer la contraseña",
+      "unexpectedError": "Ocurrió un error inesperado"
+    },
+    "success": {
+      "checkEmailConfirmation": "Revisa tu correo electrónico para el enlace de confirmación!",
+      "checkEmailReset": "Revisa tu correo electrónico para el enlace de restablecimiento de contraseña!"
+    }
   }
 }

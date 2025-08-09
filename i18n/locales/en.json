@@ -25,40 +25,9 @@
       "subtitle": "Your intelligent assistant for meaningful conversations and productivity.",
       "createAccount": "Create Account",
       "signIn": "Sign In",
-      "termsText": "By continuing, you agree to our Terms of Service and Privacy Policy"
-    },
-    "signup": {
-      "title": "Create Account",
-      "subtitle": "Join thousands of users already using AI Companion",
+      "termsText": "By continuing, you agree to our Terms of Service and Privacy Policy",
       "continueWithApple": "Continue with Apple",
-      "continueWithGoogle": "Continue with Google",
-      "or": "or",
-      "emailAddress": "Email Address",
-      "emailPlaceholder": "Enter your email",
-      "password": "Password",
-      "passwordPlaceholder": "Create a password",
-      "confirmPassword": "Confirm Password",
-      "confirmPasswordPlaceholder": "Confirm your password",
-      "createAccountButton": "Create Account",
-      "creatingAccount": "Creating Account...",
-      "alreadyHaveAccount": "Already have an account?",
-      "signInLink": "Sign In"
-    },
-    "login": {
-      "title": "Welcome Back",
-      "subtitle": "Sign in to continue your AI journey",
-      "continueWithApple": "Continue with Apple",
-      "continueWithGoogle": "Continue with Google",
-      "or": "or",
-      "emailAddress": "Email Address",
-      "emailPlaceholder": "Enter your email",
-      "password": "Password",
-      "passwordPlaceholder": "Enter your password",
-      "forgotPassword": "Forgot Password?",
-      "signInButton": "Sign In",
-      "signingIn": "Signing In...",
-      "dontHaveAccount": "Don't have an account?",
-      "signUpLink": "Sign Up"
+      "continueWithGoogle": "Continue with Google"
     },
     "errors": {
       "fillAllFields": "Please fill in all fields",

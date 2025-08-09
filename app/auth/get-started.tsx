@@ -1,35 +1,58 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
-import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated';
+import SocialLogin from '@/components/social-login';
 import { useAuth } from '@/contexts/AuthContext';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Modal, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated';
+import {
+  SafeAreaView
+} from 'react-native-safe-area-context';
 
-const AnimatedTouchableOpacity = Animated.createAnimatedComponent(TouchableOpacity);
 
 export default function GetStarted() {
   const { t } = useTranslation();
   const { signInWithOAuth, loading } = useAuth();
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
-  const handleSocialAuth = async (provider: 'apple' | 'google') => {
-    const success = await signInWithOAuth(provider);
+  const handleSocialAuth = async (provider: string) => {
+    const success = await signInWithOAuth(provider as 'apple' | 'google');
     if (success) {
       // User will be redirected automatically via auth state change
     }
   };
 
+  const renderTermsText = () => {
+    const termsText = t('auth.getStarted.termsText');
+    const parts = termsText.split(/(Privacy Policy|Terms of Service)/);
+    
+    return parts.map((part, index) => {
+      if (part === 'Privacy Policy' || part === 'Terms of Service') {
+        return (
+          <Text
+            key={index}
+            className="text-primary-500 underline"
+            onPress={() => setShowTermsModal(true)}
+          >
+            {part}
+          </Text>
+        );
+      }
+      return (
+        <Text key={index} className="text-secondary-500 dark:text-secondary-400">
+          {part}
+        </Text>
+      );
+    });
+  };
+
   return (
-    <SafeAreaView className="flex-1 bg-white dark:bg-secondary-900">
-      <StatusBar style="auto" />
+    <SafeAreaView className="flex-1 px-4 justify-center bg-white dark:bg-secondary-900">
       
-      <View className="flex-1 px-6 justify-center">
+      <View className="flex-1 justify-between">
         <Animated.View 
           entering={FadeInUp.delay(200).duration(800)} 
-          className="items-center mb-12"
+          className="items-center mt-12"
         >
-          <View className="w-32 h-32 bg-primary-500 rounded-full items-center justify-center mb-6">
-            <Text className="text-4xl">🤖</Text>
-          </View>
           
           <Text className="text-3xl font-bold text-secondary-900 dark:text-white text-center mb-3">
             {t('auth.getStarted.title')}
@@ -40,43 +63,64 @@ export default function GetStarted() {
           </Text>
         </Animated.View>
 
-        <Animated.View entering={FadeInDown.delay(400).duration(800)} className="space-y-4">
-          <AnimatedTouchableOpacity
-            entering={FadeInDown.delay(600).duration(800)}
-            onPress={() => handleSocialAuth('apple')}
-            disabled={loading}
-            className="bg-black py-4 px-6 rounded-2xl flex-row items-center justify-center space-x-3 shadow-lg"
-            style={{ shadowColor: '#000000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8 }}
-          >
-            <Text className="text-2xl">🍎</Text>
-            <Text className="text-white text-lg font-semibold">
-              {t('auth.getStarted.continueWithApple')}
-            </Text>
-          </AnimatedTouchableOpacity>
-
-          <AnimatedTouchableOpacity
-            entering={FadeInDown.delay(700).duration(800)}
-            onPress={() => handleSocialAuth('google')}
-            disabled={loading}
-            className="bg-white border-2 border-secondary-200 dark:border-secondary-700 py-4 px-6 rounded-2xl flex-row items-center justify-center space-x-3 shadow-lg"
-            style={{ shadowColor: '#0ea5e9', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.2, shadowRadius: 8 }}
-          >
-            <Text className="text-2xl">🇬</Text>
-            <Text className="text-secondary-900 dark:text-white text-lg font-semibold">
-              {t('auth.getStarted.continueWithGoogle')}
-            </Text>
-          </AnimatedTouchableOpacity>
-        </Animated.View>
-
         <Animated.View 
           entering={FadeInDown.delay(800).duration(800)} 
-          className="mt-8"
+          className="mb-12 space-y-4"
         >
-          <Text className="text-sm text-secondary-500 dark:text-secondary-400 text-center leading-relaxed">
-            {t('auth.getStarted.termsText')}
-          </Text>
+          <View className="flex-row flex-wrap justify-center items-center">
+          <Animated.View entering={FadeInDown.delay(600).duration(800)}>
+            <SocialLogin 
+              onLogin={handleSocialAuth} 
+              label={t('auth.getStarted.continueWithApple')} 
+              icon="apple"
+            />
+          </Animated.View>
+
+          <Animated.View entering={FadeInDown.delay(700).duration(800)}>
+            <SocialLogin 
+              onLogin={handleSocialAuth} 
+              label={t('auth.getStarted.continueWithGoogle')} 
+              icon="google"
+            />
+          </Animated.View>
+            <Text className="text-sm text-center leading-relaxed">
+              {renderTermsText()}
+            </Text>
+          </View>
         </Animated.View>
       </View>
+      <Modal
+        visible={showTermsModal}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        <SafeAreaView className="flex-1 bg-white dark:bg-secondary-900">
+          <View className="flex-row items-center justify-between p-4 border-b border-secondary-200 dark:border-secondary-700">
+            <Text className="text-lg font-semibold text-secondary-900 dark:text-white">
+              Terms & Privacy
+            </Text>
+            <TouchableOpacity
+              onPress={() => setShowTermsModal(false)}
+              className="p-2"
+            >
+              <Text className="text-primary-500 text-lg">Done</Text>
+            </TouchableOpacity>
+          </View>
+          
+          <ScrollView className="flex-1 p-4">
+            <Text className="text-secondary-900 dark:text-white text-base leading-relaxed">
+              This is where you would display the full Privacy Policy and Terms of Service content. 
+              You can replace this with your actual legal text.
+              
+              {"\n\n"}Privacy Policy:{"\n"}
+              Your privacy policy content goes here...
+              
+              {"\n\n"}Terms of Service:{"\n"}
+              Your terms of service content goes here...
+            </Text>
+          </ScrollView>
+        </SafeAreaView>
+      </Modal>
     </SafeAreaView>
   );
 }
