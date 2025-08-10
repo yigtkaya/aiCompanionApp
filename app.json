@@ -8,6 +8,7 @@
     "scheme": "tovi",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "usesAppleSignIn": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.kaya.tovi",
@@ -45,6 +46,8 @@
     },
     "plugins": [
       "expo-router",
+      "@react-native-google-signin/google-signin",
+      "expo-apple-authentication",
       [
         "@livekit/react-native-expo-plugin",
         "@config-plugins/react-native-webrtc"

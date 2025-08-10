@@ -10,7 +10,7 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 export default function Index() {
   const { t } = useTranslation();
   const { user, loading } = useAuth();
-  const { expoPushToken, notification, error } = useNotification();
+  const { expoPushToken, error } = useNotification();
 
   useEffect(() => {
     if (!loading) {
