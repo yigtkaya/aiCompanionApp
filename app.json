@@ -13,6 +13,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.kaya.tovi",
       "buildNumber": "1",
+      "googleServicesFile": "./GoogleService-Info.plist",
       "infoPlist": {
         "NSLocalNotificationUsageDescription": "This app uses local notifications to send you reminders.",
         "NSCameraUsageDescription": "This app needs access to your camera to scan QR codes.",

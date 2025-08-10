@@ -1,5 +1,5 @@
 import InfoModal from '@/components/info-modal';
-import { AppleLogin } from '@/components/social-buttons/apple-login';
+import { SocialButtons } from '@/components/social-buttons/apple-login';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
@@ -61,7 +61,7 @@ export default function GetStarted() {
         >
           <View className="flex-col justify-center items-center w-full">
 
-            <AppleLogin />
+            <SocialButtons />
           
             <Text className="text-sm text-center leading-relaxed">
               {renderTermsText()}

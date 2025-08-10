@@ -3,19 +3,9 @@
 import { supabase } from '@/lib/supabase';
 import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
 import * as AppleAuthentication from 'expo-apple-authentication';
-import { useEffect } from 'react';
 import { Platform, View } from 'react-native';
 
-export function AppleLogin() {
-  useEffect(() => {
-    GoogleSignin.configure({
-      scopes: ["https://www.googleapis.com/auth/drive.readonly"],
-      webClientId:
-        "751958551612-iq7qok83hrrmp9ogn6t9racqn169nv0o.apps.googleusercontent.com",
-      iosClientId:
-        "751958551612-14qllfkp2s8av5gaom2es0ccqjkjht43.apps.googleusercontent.com",
-    });
-  }, []);
+export function SocialButtons() {
 
   return (
     <View className='w-full mb-4 justify-center items-center'>
@@ -58,14 +48,17 @@ export function AppleLogin() {
             }
           }}
         />
-      )} else (
+      )}
+
       <GoogleSigninButton
         size={GoogleSigninButton.Size.Wide}
         color={GoogleSigninButton.Color.Light}
         onPress={async () => {
           try {
             await GoogleSignin.hasPlayServices()
+            console.log('hasPlayServices')
             const userInfo = await GoogleSignin.signIn()
+            console.log('userInfo', userInfo)
             if (userInfo?.data?.idToken) {
               const { data, error } = await supabase.auth.signInWithIdToken({
                 provider: 'google',
@@ -80,9 +73,7 @@ export function AppleLogin() {
           }
         }}
       />
-      )
     </View>
-
   )
 }
 
